@@ -6,8 +6,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Source Sans Pro"],
-        logo: ["Quicksand"],
+        // body: ["Source Sans Pro"],
+        // logo: ["Quicksand"],
+        // FiraMono: ["fira mono"],
+        display: ["Russo One", "sans-serif"],
       },
     },
   },
