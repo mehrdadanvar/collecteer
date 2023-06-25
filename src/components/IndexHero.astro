@@ -2,25 +2,22 @@
 import IndexRetailer from "./IndexRetailer.astro";
 ---
 
-<section
-  class="hero container font-body relative border border-red-400"
->
+<section class="hero container font-primary relative">
   <img
     src="./hero2.jpg"
     alt=""
-    class="image rounded-lg absolute -z-10 opacity-50"
+    class="image rounded-lg absolute -z-10 opacity-40"
   />
   <div class="flex flex-col">
     <h1 class="text-4xl text-slate-100 mx-auto mb-12">
       Product Data at Your FingerTips
     </h1>
-    <div class="">
+    <div class="test">
       <p
         class="text-2xl text-slate-200 w-1/3 rounded-lg mt-6 bg-opacity-60 ml-10"
       >
-        Collecteer offers a collection of Python and
-        JavaScript classes to quickly retrieve product data
-        from major retialers' websites
+        ZenCrawler offers a collection of Python and JavaScript classes to
+        quickly retrieve product data from major retialers' websites
       </p>
       <p></p>
     </div>
@@ -28,6 +25,14 @@ import IndexRetailer from "./IndexRetailer.astro";
 </section>
 
 <style>
-  .image {
+  @font-face {
+    font-family: "Anek-Gurmukhi";
+    src: url("../../public/fonts/Anek.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  .test {
+    font-family: "Anek-Gurmukhi";
   }
 </style>
