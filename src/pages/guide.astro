@@ -2,18 +2,21 @@
 import Layout from "../layouts/Layout.astro";
 import { Code } from "astro/components";
 import Page2 from "../components/Page2.mdx";
+import Alert from "../components/Alert.astro";
 ---
 
 <Layout>
-  <div>
+  <main>
     <h1>this is about</h1>
-    <section>
-      <pre><code>
+    <Alert />
+    <section class="">
+      <pre><code class="text-pink-300">
         const response = await axios.get("https://sampleapi.com/v1/data")
     </code>
   </pre>
     </section>
-    <section>
+
+    <section class="text-blue-300">
       <pre><code>
         from time import sleep
         print("hello world")
@@ -24,20 +27,16 @@ import Page2 from "../components/Page2.mdx";
   </pre>
     </section>
     <section>
-      <div
-        class="rounded-lg w-1/4 bg-slate-800 border border-red-800 p-4"
-      >
+      <div class="rounded-lg w-1/4 bg-slate-800 border border-red-800 p-4 mx-4">
         <Code
           code={`print ("hello word") \ndef get_data():\n    [x for x in some_data]`}
-          lang="js"
+          lang="python"
           theme="dark-plus"
         />
       </div>
     </section>
-    <section
-      class="font-mono w-1/2 rounded-md bg-gray-800 m-4 p-4"
-    >
+    <section class="font-mono w-1/2 rounded-md bg-gray-800 m-4 p-4">
       <Page2 />
     </section>
-  </div>
+  </main>
 </Layout>
