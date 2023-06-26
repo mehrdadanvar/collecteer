@@ -1,13 +1,13 @@
 <template>
   <main class="register">
     <div class="">
-      <h1 class="text-2xl mb-12 text-slate-700">Welcome to Zen Crawler</h1>
-      <hr />
-      <form class="mt-6" @submit.prevent="upload">
+      <h1 class="text-2xl mb-6 text-slate-600">Welcome to Zen Crawler</h1>
+      <hr class="" />
+      <form class="mt-8" @submit.prevent="upload">
         <div class="grid grid-cols-2 gap-6">
           <div class="">
-            <div class="flex flex-row rounded-lg w-5/7 gap-1">
-              <img src="../../public/user.svg" alt="" />
+            <div class="flex flex-row rounded-lg w-5/7 gap-3">
+              <img src="../../public/user.svg" alt="" class="opacity-40" />
               <input
                 type="text"
                 v-model="firstname"
@@ -17,8 +17,8 @@
             </div>
           </div>
           <div class="">
-            <div class="flex flex-row rounded-lg w-5/7 gap-1">
-              <img src="../../public/user.svg" alt="" />
+            <div class="flex flex-row rounded-lg w-5/7 gap-3">
+              <img src="../../public/user.svg" alt="" class="opacity-40" />
               <input
                 type="text"
                 v-model="lastname"
@@ -28,7 +28,13 @@
             </div>
           </div>
           <div class="">
-            <div class="flex flex-row rounded-lg w-3/4">
+            <div class="flex flex-row rounded-lg w-5/7 gap-3">
+              <img
+                src="../../public/email.svg"
+                alt=""
+                class="opacity-40"
+                width="29"
+              />
               <input
                 type="text"
                 v-model="email"
@@ -38,8 +44,8 @@
               />
             </div>
           </div>
-          <div class="">
-            <div class="flex flex-row rounded-lg w-3/4">
+          <!-- <div class="">
+            <div class="flex flex-row rounded-lg w-5/7 gap-3">
               <input
                 type="text"
                 v-model="student_id"
@@ -48,9 +54,15 @@
                 autocomplete="off"
               />
             </div>
-          </div>
+          </div> -->
           <div class="">
-            <div class="flex flex-row rounded-lg w-3/4">
+            <div class="flex flex-row rounded-lg w-5/7 gap-3">
+              <img
+                src="../../public/password2.svg"
+                alt=""
+                width="25"
+                class="opacity-40"
+              />
               <input
                 type="password"
                 placeholder="more than 6 characters"
@@ -61,7 +73,13 @@
             </div>
           </div>
           <div class="">
-            <div class="flex flex-row rounded-lg w-3/4">
+            <div class="flex flex-row rounded-lg w-5/7 gap-3">
+              <img
+                src="../../public/password2.svg"
+                alt=""
+                width="25"
+                class="opacity-40"
+              />
               <input
                 type="password"
                 placeholder="Confirm Your Password"
@@ -72,14 +90,14 @@
           </div>
         </div>
         <hr class="mt-12" />
-        <div class="foot flex flex-row gap-12 mt-6">
+        <div class="foot flex flex-row gap-12 mt-16">
           <button
             class="bg-amber-600 text-white rounded-3xl w-3/4 hover:bg-slate-700 hover:text-white p-2"
           >
             Create Account
           </button>
           <button
-            class="bg-slate-100 text-black rounded-3xl w-3/4 hover:bg-gray-700 hover:text-white p-2"
+            class="bg-orange-100 text-black rounded-3xl w-3/4 hover:bg-gray-700 hover:text-white p-2"
           >
             Sign In
           </button>

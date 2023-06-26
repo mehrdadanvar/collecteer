@@ -1,21 +1,21 @@
 <template>
   <div
-    class="text-slate-300 bg-slate-800 w-1/3 mx-auto rounded-lg h-48 shadow-lg shadow-slate-500 transition ease-linear duration-150 hover:scale-105 hover:shadow-lg hover:shadow-white"
+    class="text-slate-300 bg-gray-800 w-1/3 mx-auto rounded-lg h-48 transition ease-linear duration-150 hover:scale-105 hover:shadow-lg hover:shadow-white"
   >
-    <div class="bg-slate-800 rounded-t-lg">
+    <div class="bg-slate-900 rounded-t-lg">
       <div class="flex flex-row gap-1 justify-end items-center h-7 pr-3">
         <div class="w-3 h-3 rounded-full bg-red-600"></div>
         <div class="w-3 h-3 rounded-full bg-yellow-600"></div>
         <div class="w-3 h-3 rounded-full bg-violet-600"></div>
       </div>
     </div>
-    <div class="terminal text-lg flex flex-row gap-4 p-2">
+    <div class="terminal text-lg flex flex-row gap-4 p-2 font-Inter">
       <div class="text-slate-600">
         <p v-for="x in [0, 1, 2, 3]" :key="x">
           {{ x + 1 }}
         </p>
       </div>
-      <div class="text-violet-500">
+      <div class="text-teal-400">
         <p class="test">{{ text_0 }}</p>
         <p>{{ text_1 }}</p>
         <p>{{ text_2 }}</p>
