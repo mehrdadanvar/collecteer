@@ -2,32 +2,14 @@
 import Navbar from "../components/Navbar.astro";
 import IndexHero from "../components/IndexHero.astro";
 import IndexRetailer from "../components/IndexRetailer.astro";
-import HeroTerminal from "../components/HeroTerminal.vue";
+// import HeroTerminal from "../components/HeroTerminal.vue";
 ---
 
-<html class="bg-slate-900">
+<html class="bg-gray-700">
   <head></head>
   <body>
     <Navbar />
     <IndexHero />
-    <HeroTerminal client:only="vue" />
     <IndexRetailer />
-    <!-- <div class="mx-auto my-6 text-white font-body w-1/2">
-      <div class="grid grid-cols-2 gap-6 p-2">
-        <IndexRetailer
-          title="Canadian Tire"
-          img_url="https://media-www.canadiantire.ca/logo/ct-brandmark-standard-primary-rgw-pos-hex-5f6ce5ad-aadc-44da-9d55-a06d4c6273bb.svg"
-        />
-        <IndexRetailer title="Rona" img_url="./rona.svg" />
-        <IndexRetailer
-          title="Marks"
-          img_url="https://marks.scene7.com/is/image/marksp/2020-Marks-Logo-D-146x47px?fmt=png-alpha&wid=150&hei=100&resMode=sharp2&qty=85,0"
-        />
-        <IndexRetailer
-          title="Craigslist"
-          img_url="https://1000logos.net/wp-content/uploads/2020/11/Craigslist-emblem-500x313.jpg"
-        />
-      </div>
-    </div> -->
   </body>
 </html>
