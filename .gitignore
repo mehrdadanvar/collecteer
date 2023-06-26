@@ -1,6 +1,7 @@
 # build output
 dist/
-
+invoices/
+data/
 # generated types
 .astro/
 
