@@ -16,10 +16,10 @@
         </p>
       </div>
       <div class="text-teal-400">
-        <p class="test">{{ text_0 }}</p>
-        <p>{{ text_1 }}</p>
-        <p>{{ text_2 }}</p>
-        <p>{{ text_3 }}</p>
+        <p class="test">{{ rendered_text[0] }}</p>
+        <p>{{ rendered_text[1] }}</p>
+        <p>{{ rendered_text[2] }}</p>
+        <p>{{ rendered_text[3] }}</p>
       </div>
     </div>
     <!-- <p>{{ rendered_text }}</p> -->
@@ -35,30 +35,28 @@ let major_text = [
 ];
 let minor_text = ref("");
 
-let rendered_text = ref([]);
-let text_0 = ref("");
-let text_1 = ref("");
-let text_2 = ref("");
-let text_3 = ref("");
+let rendered_text = ref(["", "", "", ""]);
+
 const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 
-async function minor_render(input, time, it) {
+async function minor_render(input, time, index) {
   for (let i = 0; i < input.length; i++) {
-    eval(`text_${it}.value = text_${it}.value.concat(input[i]);`);
-    console.log(eval(`text_${it}`));
+    rendered_text.value[index] += input[i];
     await timer(time);
   }
 }
 
 async function order(main_array) {
   for (let i = 0; i < main_array.length; i++) {
-    await minor_render(main_array[i], 25, i);
+    await minor_render(main_array[i], 100, i);
   }
 }
+
 async function delay() {
-  await timer(500);
+  await timer(1000);
   order(major_text);
 }
+
 delay();
 </script>
 
