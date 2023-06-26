@@ -4,6 +4,8 @@ import vue from "@astrojs/vue";
 import mdx from "@astrojs/mdx";
 import cityLights from "./city-lights.json";
 import Nord from "./Nord.json";
+import node from "@astrojs/node";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), vue(), mdx()],
@@ -17,7 +19,11 @@ export default defineConfig({
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
       langs: [],
       // Enable word wrap to prevent horizontal scrolling
-      wrap: true,
-    },
+      wrap: true
+    }
   },
+  output: "server",
+  adapter: node({
+    mode: "standalone"
+  })
 });
