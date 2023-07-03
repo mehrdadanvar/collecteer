@@ -90,17 +90,20 @@
           </div>
         </div>
         <hr class="mt-12" />
-        <div class="foot flex flex-row gap-12 mt-16">
+        <div class="foot flex flex-col gap-12 mt-10">
           <button
-            class="bg-amber-600 text-white rounded-3xl w-3/4 hover:bg-slate-700 hover:text-white p-2"
+            class="bg-teal-500 text-white rounded-3xl w-1/2 hover:bg-slate-700 hover:text-white p-2 mx-auto"
           >
             Create Account
           </button>
-          <button
-            class="bg-orange-100 text-black rounded-3xl w-3/4 hover:bg-gray-700 hover:text-white p-2"
+          <div class="mx-auto">
+            <a href="">Already Have an Account? Sing In</a>
+          </div>
+          <!-- <button
+            class="border border-gray-500text-black rounded-3xl w-3/4 hover:bg-gray-700 hover:text-white p-2"
           >
             Sign In
-          </button>
+          </button> -->
         </div>
       </form>
     </div>
