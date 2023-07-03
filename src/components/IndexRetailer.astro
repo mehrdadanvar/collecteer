@@ -1,30 +1,43 @@
 ---
 import IndexSRetailer from "./IndexSRetailer.astro";
 let items = [
-  { title: "Canadain Tire", imagePath: "tire.svg" },
-  { title: "Rona", imagePath: "rona.svg" },
-  { title: "Marks", imagePath: "marks.svg" },
+  { title: "Canadain Tire", imagePath: "tire.svg", link: "/ct/main" },
+  { title: "Rona", imagePath: "rona.svg", link: "sample" },
+  { title: "Marks", imagePath: "marks.svg", link: "sample" },
   { title: "Super Store", imagePath: "superstore.svg" },
-  { title: "Lowess", imagePath: "lowess.svg" },
-  { title: "Amazon", imagePath: "amazon.svg" },
+  { title: "Lowess", imagePath: "lowess.svg", link: "sample" },
+  { title: "Amazon", imagePath: "amazon.svg", link: "sample" },
 ];
 ---
 
-<section class="p-4 mt-12 mx-24">
-  <div class="flex flex-row flex-wrap bg-slate-700">
-    {
-      items.map((item) => (
-        <div class="text-green-300 bg-slate-600 rounded-xl m-2 p-1 hover:scale-105 hover:border border-amber-400">
-          <h4>{item.title}</h4>
-          <img class="px-12 py-6" src={item.imagePath} alt="" width="200" />
-        </div>
-      ))
-    }
-  </div>
+<section class="p-4 mt-24 mx-24">
   <div>
-    <p class="text-3xl text-teal-200 mt-6 ml-24 font-Inter">
+    <p class="text-3xl text-teal-200 mt-6 ml-24 font-Inter w-1/2">
       A collection of Python and JavaScript classes to quickly retrieve product
       data from major retialers' websites
     </p>
   </div>
+  <div
+    class="flex flex-wrap gap-1 border border-slate-800 rounded-xl p-12 shadow-slate-800 shadow-sm"
+  >
+    {
+      items.map((item) => (
+        <div class=" text-teal-500 bg-slate-900 rounded-full w-52 h-52 mx-auto border-slate-500 border-r-4 transition-all ease-linear duration-75 hover:border-l-4 hover:border-slate-300 hover:scale-110">
+          <div class="flex flex-col">
+            <a href={item.link}>
+              <img
+                class="mx-auto my-12"
+                src={item.imagePath}
+                alt=""
+                width="100"
+              />
+            </a>
+            <button>read</button>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- <h4 class="text-2xl">{item.title}</h4> -->
 </section>
