@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-slate-300 bg-gray-800 w-1/3 mx-auto rounded-lg h-48 transition ease-linear duration-150 hover:scale-105 hover:shadow-lg hover:shadow-white"
+    class="text-slate-300 bg-gray-800 border border-slate-700 w-1/3 mx-auto rounded-lg h-48 transition ease-linear duration-50 shadow-sm hover:scale-105"
   >
     <div class="bg-slate-900 rounded-t-lg">
       <div class="flex flex-row gap-1 justify-end items-center h-7 pr-3">
@@ -48,7 +48,7 @@ async function minor_render(input, time, index) {
 
 async function order(main_array) {
   for (let i = 0; i < main_array.length; i++) {
-    await minor_render(main_array[i], 100, i);
+    await minor_render(main_array[i], 10, i);
   }
 }
 
