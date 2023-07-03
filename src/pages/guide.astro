@@ -1,12 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Code } from "astro/components";
-import Page2 from "../components/Page2.mdx";
+import Document from "../layouts/Document.astro";
 import Alert from "../components/Alert.astro";
 ---
 
-<Layout>
-  <main>
-    <Alert>some html goes here</Alert>
-  </main>
-</Layout>
+<Document>
+  <section>
+    <Alert
+      title="This project is still under construction!"
+      children={[
+        "At the moment two of the 6 promised retailers' packages have functional code that can be used. This shouldb not discourage you from keeping an eye on this project, because updates are being continuesly tested and pushed.",
+      ]}
+    />
+  </section>
+</Document>
